@@ -1,13 +1,13 @@
-# DSP-based automotive predictive maintenance
+# Automotive predictive maintenance
 
-MATLAB feature pipeline for labelled engine-acoustic signals: Butterworth
-high-pass filtering, normalisation, time-domain features and spectral features.
+This small study is now presented with the other engineering studies in the [consolidated portfolio](https://github.com/noumansameer789/noumansameer789/tree/main/engineering-studies/automotive-predictive-maintenance).
 
-The original small labelled dataset produced perfect class separation. That is
-documented as a warning, not a deployment claim. A credible next evaluation needs
-more engines, operating conditions, recording devices, grouped train/test splits
-and a prospectively collected holdout set.
+## Scope
 
-Run `matlab/feature_pipeline.m` with one signal per row and the sample rate in
-hertz. The function returns RMS, variance, zero-crossing rate, spectral centroid,
-bandwidth and 85% spectral roll-off.
+MATLAB feature extraction study. No engine recordings, classifier validation, plots from real recordings or deployment evidence are included.
+
+The existing source remains here for traceability. This is a study, not an additional completed deployed product.
+
+## Verification boundary
+
+The extractor preserves amplitude for RMS/variance, rejects sample rates at or below 200 Hz and short inputs, and handles silent signals. `matlab/test_feature_pipeline.m` provides synthetic regression checks. These checks require MATLAB and Signal Processing Toolbox and were not executed in the publication environment; no engine-fault accuracy is claimed.
